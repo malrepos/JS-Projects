@@ -1,6 +1,6 @@
-const hourElement = document.querySelector(".hour");
-const minuteElement = document.querySelector(".minute");
-const secondsElement = document.querySelector(".seconds");
+const hourElement = document.querySelector(".arrows .hour");
+const minuteElement = document.querySelector(".arrows .minutes");
+const secondsElement = document.querySelector(".arrows .seconds");
 
 function updateClock() {
   const currentDate = new Date();
@@ -16,6 +16,6 @@ function updateClock() {
   minuteElement.style.transform = `rotate(${minuteDegree}deg)`;
 
   const secondDegree = (seconds / 60) * 360;
-  secondsElement.style.getPropertyValue('transform') = `rotate (${secondDegree}deg)`;
+  secondsElement.style.transform = `rotate(${secondDegree}deg)`;
 }
 updateClock();
